@@ -1,7 +1,5 @@
 // next.config.js
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv-safe').load();
-  }
+
   const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
   const path = require('path');
   const glob = require('glob');
@@ -25,70 +23,6 @@ if (process.env.NODE_ENV !== 'production') {
         );
       }
   
-      config.plugins.push(
-        new CompressionPlugin(),
-        new webpack.IgnorePlugin(/\.test.js$/),
-        new webpack.DefinePlugin({
-          'process.env.IS_SERVER': isServer,
-          'process.env.IS_CLIENT': !isServer,
-          'process.env.BRANCH': JSON.stringify(process.env.BRANCH),
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-          'process.env.SEGMENT_KEY_WRITE': JSON.stringify(
-            process.env.SEGMENT_KEY_WRITE
-          ),
-          'process.env.CONTENTFUL_SPACE_ID': JSON.stringify(
-            process.env.CONTENTFUL_SPACE_ID
-          ),
-          'process.env.CONTENTFUL_HOST': JSON.stringify(
-            process.env.CONTENTFUL_HOST
-          ),
-          'process.env.CONTENTFUL_ACCESS_TOKEN': JSON.stringify(
-            process.env.CONTENTFUL_ACCESS_TOKEN
-          ),
-          'process.env.IMGIX_HOST': JSON.stringify(process.env.IMGIX_HOST),
-          'process.env.WASABI_API': JSON.stringify(process.env.WASABI_API),
-          'process.env.WASABI_APP_NAME': JSON.stringify(
-            process.env.WASABI_APP_NAME
-          ),
-          'process.env.REACT_APP_API': JSON.stringify(process.env.REACT_APP_API),
-          'process.env.REACT_APP_SURVEY': JSON.stringify(
-            process.env.REACT_APP_SURVEY
-          ),
-          'process.env.REACT_APP_STUDIO_SPECIFIC_SURVEY_ID': JSON.stringify(
-            process.env.REACT_APP_STUDIO_SPECIFIC_SURVEY_ID
-          ),
-          'process.env.REACT_APP_STRIPE_PK': JSON.stringify(
-            process.env.REACT_APP_STRIPE_PK
-          ),
-          'process.env.SENTRY_KEY': JSON.stringify(process.env.SENTRY_KEY),
-          'process.env.CANDID_ENV': JSON.stringify(process.env.CANDID_ENV),
-          'process.env.REACT_APP_INSTANTSEARCH_ID': JSON.stringify(
-            process.env.REACT_APP_INSTANTSEARCH_ID
-          ),
-          'process.env.REACT_APP_INSTANTSEARCH_KEY': JSON.stringify(
-            process.env.REACT_APP_INSTANTSEARCH_KEY
-          ),
-          'process.env.REACT_APP_GOOGLE_MAPS_API_KEY': JSON.stringify(
-            process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-          ),
-          'process.env.REACT_APP_IPSTACK_API_KEY': JSON.stringify(
-            process.env.REACT_APP_IPSTACK_API_KEY
-          ),
-          'process.env.AFFIRM_API_KEY': JSON.stringify(
-            process.env.AFFIRM_API_KEY
-          ),
-          'process.env.AFFIRM_SCRIPT_URL': JSON.stringify(
-            process.env.AFFIRM_SCRIPT_URL
-          ),
-          'process.env.LIVE_CHAT_LICENSE_ID': JSON.stringify(
-            process.env.LIVE_CHAT_LICENSE_ID
-          ),
-          'process.env.SIGMUND_ENDPOINT': JSON.stringify(
-            process.env.SIGMUND_ENDPOINT
-          ),
-          'process.env.USE_SIGMUND': JSON.stringify(process.env.USE_SIGMUND),
-        })
-      );
   
       if (
         process.env.NODE_ENV === 'production' ||
