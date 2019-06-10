@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# tmp
+.tmp/
+tmp/
+
+# dotenv environment variables file
+.env
+.envrc
+
+# Optional eslint cache
+.eslintcache
+
+# next.js build folder
+.next/
+
+# output directories
+out/
+reports/
+
+package-lock.json
+.DS_Store
+
+# editor files
+.vscode/
+*~
+\#*\#
+.\#*
+
+# cache
+.cache/
+
