@@ -1,0 +1,30 @@
+{
+  "presets": [
+    ["next/babel", {
+      "jest": {},
+      "preset-env": {},
+      "preset-react": {},
+      "transform-runtime": { "useESModules": false },
+      "class-properties": {},
+      "object-rest-spread": {},
+    }],
+    ["@zeit/next-typescript/babel"]
+  ],
+  "plugins": [
+    ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "lib": "./lib",
+          "components": "./components/",
+          "^components/(.+)": "./components/\\1",
+          "styles": "./styles",
+          "static": "./static",
+        }
+      }
+    ]
+  ],
+  "ignore": []
+}

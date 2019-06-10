@@ -1,0 +1,150 @@
+Arguments: 
+  /Users/lassiter.gregg/.nvm/versions/node/v12.3.1/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js add --save @types/next @types/react @zeit/next-typescript next prop-types react typescript
+
+PATH: 
+  /Users/lassiter.gregg/.nvm/versions/node/v12.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.3.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/lassiter.gregg/code/examples/next-typescript/package.json: Unexpected token / in JSON at position 863
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "with-typescript-styled-components",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "next",
+      "build": "next build",
+      "start": "next start",
+      "local-dev": "PORT=3000 node --max-old-space-size=4096  server",
+      "build-example": "eval $(cat .env) next build && eval $(cat .env) next export && cp _headers _redirects ./out"
+    },
+    "dependencies": {
+      "@types/next": "^8.0.1",
+      "@types/react": "^16.8.6",
+      "@types/styled-components": "^4.1.11",
+      "@zeit/next-typescript": "^1.1.1",
+      "next": "^8.0.3",
+      "react": "^16.8.3",
+      "react-dom": "^16.8.3",
+      "styled-components": "^4.1.3"
+    },
+    "devDependencies": {
+      "babel-plugin-styled-components": "^1.10.0"
+    },
+    "lint-staged": {
+      "*.{js,json,css,md}": "prettier --write"
+    },
+    "jest": {
+      "setupFiles": [
+        "<rootDir>/setupJest.js"
+      ]
+    },
+    "license": "ISC"
+  }
+  // {
+  //   "name": "example",
+  //   "version": "1.0.0",
+  //   "main": "index.js",
+  //   "license": "MIT",
+  //   "scripts": {
+  
+  //   },
+  //   "dependencies": {
+  //     "@types/next": "^8.0.5",
+  //     "@types/react": "^16.8.19",
+  //     "@types/react-dom": "^16.8.4",
+  //     "@zeit/next-typescript": "^1.1.1",
+  //     "autoprefixer": "^7.1.1",
+  //     "axios": "^0.18.0",
+  //     "contentful": "^7.5.0",
+  //     "next": "^8.1.0",
+  //     "prop-types": "15.6.0",
+  //     "react": "^16.8.6",
+  //     "styled-components": "^4.2.0",
+  //     "typescript": "^3.5.1"
+  //   },
+  //   "devDependencies": {
+  //     "babel-eslint": "^10.0.1",
+  //     "babel-loader": "^8.0.4",
+  //     "babel-plugin-module-resolver": "^3.2.0",
+  //     "babel-polyfill": "^6.26.0",
+  //     "eslint-config-airbnb": "^17.1.0",
+  //     "eslint-config-airbnb-base": "^13.1.0",
+  //     "eslint-config-prettier": "^3.6.0",
+  //     "eslint-import-resolver-babel-module": "5.0.1",
+  //     "eslint-plugin-eslint-comments": "^3.0.1",
+  //     "eslint-plugin-import": "^2.15.0",
+  //     "eslint-plugin-jest": "^22.2.2",
+  //     "eslint-plugin-jsx-a11y": "^6.1.2",
+  //     "eslint-plugin-prettier": "^3.0.1",
+  //     "eslint-plugin-react": "^7.12.4",
+  //     "file-loader": "^3.0.1",
+  //     "husky": "^1.3.1",
+  //     "image-hash": "^2.0.0",
+  //     "image-webpack-loader": "^3.3.1",
+  //     "jest": "^24.7.1",
+  //     "jest-fetch-mock": "^2.1.2",
+  //     "jsdoc": "^3.5.5",
+  //     "lint-staged": "^4.0.0",
+  //     "next-style-loader": "^0.3.1",
+  //     "npm-check": "^5.9.0",
+  //     "postcss": "^7.0.14",
+  //     "postcss-cssnext": "^2.11.0",
+  //     "postcss-easy-import": "^3.0.0",
+  //     "postcss-flexbugs-fixes": "^4.1.0",
+  //     "postcss-loader": "^3.0.0",
+  //     "preact": "^8.4.2",
+  //     "prettier": "^1.16.1",
+  //     "pretty-format": "^24.0.0",
+  //     "raw-loader": "^2.0.0",
+  //     "sass-loader": "^6.0.6",
+  //     "styled-jsx-plugin-postcss": "^2.0.0",
+  //     "stylelint": "^9.10.1",
+  //     "stylelint-config-prettier": "^4.0.0",
+  //     "stylelint-config-standard": "^18.2.0",
+  //     "stylelint-config-styled-components": "^0.1.1",
+  //     "stylelint-order": "^2.0.0",
+  //     "stylelint-processor-styled-components": "^1.5.2",
+  //     "terser-webpack-plugin": "^1.2.2",
+  //     "webpack": "^4.31.0",
+  //     "webpack-bundle-analyzer": "^2.8.3"
+  //   },
+  //   "resolutions": {
+  //     "ansi-regex": "^2.0.0",
+  //     "pretty-format": "20.0.1",
+  //     "string-width": "2.0.0"
+  //   },
+  //   "husky": {
+  //     "hooks": {
+  //       "pre-commit": "lint-staged"
+  //     }
+  //   },
+  //   "lint-staged": {
+  //     "*.{js,json,css,md}": "prettier --write"
+  //   },
+  //   "jest": {
+  //     "setupFiles": [
+  //       "<rootDir>/setupJest.js"
+  //     ]
+  //   }
+  // }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
